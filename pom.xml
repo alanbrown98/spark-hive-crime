@@ -1,0 +1,40 @@
+<project>
+  <groupId>edu.berkeley</groupId>
+  <artifactId>demo-hive</artifactId>
+  <modelVersion>4.0.0</modelVersion>
+  <name>DemoHive</name>   
+  <packaging>jar</packaging>
+  <version>1.0</version>
+  <dependencies>
+    <dependency> <!-- Spark dependency -->
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-core_2.11</artifactId>
+      <version>2.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>   <!-- ARB add this for spark SQL -->
+      <artifactId>spark-sql_2.11</artifactId> <!-- matching Scala version -->
+      <version>2.0.1</version>  <!-- matching Spark Core version -->
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>   <!-- ARB add this for spark Hive -->
+      <artifactId>spark-hive_2.11</artifactId> <!-- matching Scala version -->
+      <version>2.0.1</version>  <!-- matching Spark Core version -->
+    </dependency>
+  </dependencies>
+  <build>
+    <pluginManagement>
+      <plugins>
+         <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.0</version>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
